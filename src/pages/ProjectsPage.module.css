@@ -1,0 +1,234 @@
+.page {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+}
+
+[data-theme="dark"] .page {
+  background: var(--bg);
+}
+
+.heroSection {
+  max-width: 1120px;
+  margin: 0 auto 3rem;
+  padding: 2.5rem;
+  border-radius: 1.75rem;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+[data-theme="dark"] .heroSection {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(96, 165, 250, 0.2);
+}
+
+.heroContent {
+  max-width: 720px;
+}
+
+.subtitle {
+  margin: 0 0 0.5rem;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.title {
+  margin: 0 0 1rem;
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  line-height: 1.05;
+}
+
+.description {
+  margin: 0 0 1.5rem;
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #1d4ed8;
+  font-weight: 600;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.backLink::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #3b82f6, #14b8a6);
+  transition: width 0.25s ease;
+}
+
+.backLink:hover {
+  color: #2563eb;
+}
+
+.backLink:hover::after {
+  width: 100%;
+}
+
+.gridSection {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.96),
+    rgba(248, 250, 252, 0.96)
+  );
+  border-radius: 1.5rem;
+  padding: 1.75rem;
+  box-shadow: 0 25px 80px rgba(15, 23, 42, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  border: 1px solid rgba(59, 130, 246, 0.14);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.18),
+    transparent 60%
+  );
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+[data-theme="dark"] .card {
+  background: linear-gradient(
+    180deg,
+    rgba(17, 24, 39, 0.98),
+    rgba(15, 23, 42, 0.98)
+  );
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.35);
+  border-color: rgba(96, 165, 250, 0.12);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 95px rgba(15, 23, 42, 0.16);
+}
+
+.cardHeader h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.35rem;
+  background: linear-gradient(135deg, #3b82f6, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cardHeader p {
+  margin: 0;
+  color: #64748b;
+}
+
+[data-theme="dark"] .cardHeader p {
+  color: #cbd5e1;
+}
+
+.cardBody {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech {
+  padding: 0.45rem 0.95rem;
+  border-radius: 999px;
+  background: rgba(59, 130, 246, 0.12);
+  color: #1e3a8a;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+[data-theme="dark"] .tech {
+  background: rgba(96, 165, 250, 0.12);
+  color: #93c5fd;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1rem;
+  border-radius: 0.95rem;
+  background: rgba(59, 130, 246, 0.08);
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+[data-theme="dark"] .links a {
+  background: rgba(96, 165, 250, 0.12);
+  color: #93c5fd;
+}
+
+.links a:hover {
+  transform: translateY(-1px);
+  background: rgba(59, 130, 246, 0.16);
+}
+
+[data-theme="dark"] .links a:hover {
+  background: rgba(96, 165, 250, 0.2);
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 2rem 1rem;
+  }
+
+  .heroSection {
+    padding: 2rem;
+  }
+}

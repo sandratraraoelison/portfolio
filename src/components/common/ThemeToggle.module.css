@@ -1,0 +1,22 @@
+.toggle {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.toggle:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.toggle:active {
+  transform: scale(0.95);
+}
