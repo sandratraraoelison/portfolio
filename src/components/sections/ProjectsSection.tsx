@@ -13,11 +13,11 @@ export const ProjectsSection = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles.container}>
-        <h2 className={styles.title}>{t.projects.title}</h2>
+        <h2 className={styles.title} data-motion>{t.projects.title}</h2>
 
         <div className={styles.grid}>
           {featuredProjects.map((project) => (
-            <div key={project.id} className={styles.card}>
+            <div key={project.id} className={styles.card} data-motion>
               <div className={styles.cardImage}>
                 <div className={styles.imagePlaceholder}>{project.title}</div>
               </div>

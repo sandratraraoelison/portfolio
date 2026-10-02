@@ -5,6 +5,7 @@
 import { useTranslation } from "../../hooks/useTranslation";
 import { useLanguage } from "../../context/LanguageContext";
 import { experiences } from "../../data/experience";
+import { Typewriter } from "../common/Typewriter";
 import { Button } from "../common/Button";
 import styles from "./HeroSection.module.css";
 
@@ -48,17 +49,11 @@ export const HeroSection = () => {
 
   return (
     <section id="hero" className={styles.hero}>
-      <div className={styles.heroDecor}>
-        <span className={`${styles.bubble} ${styles.bubbleLarge}`} />
-        <span className={`${styles.bubble} ${styles.bubbleMedium}`} />
-        <span className={`${styles.bubble} ${styles.bubbleSmall}`} />
-        <span className={`${styles.bubble} ${styles.bubbleGlow}`} />
-      </div>
       <div className={styles.container}>
-        <div className={styles.content}>
-          <p className={styles.greeting}>{t.hero.greeting}</p>
-          <h1 className={styles.title}>{t.hero.title}</h1>
-          <p className={styles.subtitle}>{t.hero.subtitle}</p>
+        <div className={styles.content} data-motion>
+          <p className={styles.greeting}><span aria-hidden="true">~/portfolio $ </span>{t.hero.greeting}</p>
+          <h1 className={styles.title}><Typewriter text={t.hero.title} delay={200} duration={1300} /></h1>
+          <p className={styles.subtitle}><span className={styles.prompt} aria-hidden="true">&gt; </span><Typewriter text={t.hero.subtitle} delay={1600} duration={900} /></p>
 
           <p className={styles.description}>{t.hero.description}</p>
 
@@ -97,9 +92,26 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className={styles.image}>
-          <div className={styles.avatar}>
-            <div className={styles.initials}>S</div>
+        <div className={styles.image} data-motion data-motion-delay="120">
+          <div className={styles.terminal}>
+            <div className={styles.terminalHeader}>
+              <span className={styles.windowControls} aria-hidden="true"><i /><i /><i /></span>
+              <span>sandratra@portfolio: ~</span>
+              <span className={styles.shell}>JS</span>
+            </div>
+            <div className={styles.terminalBody}>
+              <p className={styles.command}><span className={styles.terminalPrompt} aria-hidden="true">$ </span><Typewriter text="cat developer.js" delay={500} duration={650} /></p>
+              <pre className={styles.code}><Typewriter
+                text={`const developer = {\n  name: "Sandratra",\n  role: "Fullstack JS",\n  stack: [\n    "React",\n    "TypeScript",\n    "Vite"\n  ]\n};`}
+                delay={1300}
+                duration={2200}
+              /></pre>
+              <p className={styles.command}><span className={styles.terminalPrompt} aria-hidden="true">$ </span><Typewriter text="developer.build()" delay={3700} duration={700} /></p>
+              <div className={styles.terminalFooter}>
+                <span className={styles.statusDot} aria-hidden="true" />
+                <span>{language === "fr" ? "Du code aux interfaces." : "From code to interfaces."}</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -40,13 +40,13 @@ export const ContactSection = () => {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.container}>
-        <h2 className={styles.title}>{t.contact.title}</h2>
+        <h2 className={styles.title} data-motion>{t.contact.title}</h2>
         <p className={styles.subtitle}>{t.contact.subtitle}</p>
 
         <div className={styles.content}>
-          <div className={styles.info}>
+          <div className={styles.info} data-motion>
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>📧</span>
+              <span className={styles.infoIcon}>@</span>
               <div>
                 <h3>{t.contact.email}</h3>
                 <a href="mailto:raoelisonsandratra@gmail.com">
@@ -56,7 +56,7 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>📞</span>
+              <span className={styles.infoIcon}>↗</span>
               <div>
                 <h3>{t.contact.phone}</h3>
                 <p>{t.contact.phoneValue}</p>
@@ -64,7 +64,7 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>📍</span>
+              <span className={styles.infoIcon}>⌖</span>
               <div>
                 <h3>{t.contact.location}</h3>
                 <p>{t.contact.locationValue}</p>
@@ -72,7 +72,7 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>🔗</span>
+              <span className={styles.infoIcon}>↗</span>
               <div>
                 <h3>{t.contact.networks}</h3>
                 <div className={styles.socialLinks}>
@@ -95,7 +95,7 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <form className={styles.form} data-motion data-motion-delay="100" onSubmit={handleSubmit}>
             <div className={styles.formGroup}>
               <label htmlFor="name">{t.contact.name}</label>
               <input

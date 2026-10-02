@@ -1,13 +1,17 @@
+import { useRef } from "react";
+import { useMotion } from "../hooks/useMotion";
 import { useTranslation } from "../hooks/useTranslation";
 import { projects } from "../data/projects";
 import styles from "./ProjectsPage.module.css";
 
 export const ProjectsPage = () => {
+  const motionRef = useRef<HTMLElement>(null);
+  useMotion(motionRef);
   const t = useTranslation();
 
   return (
-    <main className={styles.page}>
-      <section className={styles.heroSection}>
+    <main className={styles.page} ref={motionRef}>
+      <section className={styles.heroSection} data-motion>
         <div className={styles.heroContent}>
           <p className={styles.subtitle}>{t.projects.pageIntro}</p>
           <h1 className={styles.title}>{t.projects.allTitle}</h1>
@@ -21,7 +25,7 @@ export const ProjectsPage = () => {
       <section className={styles.gridSection}>
         <div className={styles.grid}>
           {projects.map((project) => (
-            <article key={project.id} className={styles.card}>
+            <article key={project.id} className={styles.card} data-motion>
               <div className={styles.cardHeader}>
                 <h2>{project.title}</h2>
                 <p>{project.description}</p>

@@ -12,13 +12,14 @@ export const ExperienceSection = () => {
   return (
     <section id="experience" className={styles.experience}>
       <div className={styles.container}>
-        <h2 className={styles.title}>{t.experience.title}</h2>
+        <h2 className={styles.title} data-motion>{t.experience.title}</h2>
 
-        <div className={styles.timeline}>
-          {experiences.map((exp, index) => (
-            <div key={exp.id} className={styles.timelineItem}>
+        <div className={styles.timeline} data-timeline>
+          <div className={styles.timelineTrack} aria-hidden="true" />
+          {experiences.map((exp) => (
+            <div key={exp.id} className={styles.timelineItem} data-timeline-step>
               <div className={styles.timelineMarker}></div>
-              <div className={styles.timelineContent}>
+              <div className={styles.timelineContent} data-motion>
                 <h3 className={styles.position}>{exp.position}</h3>
                 <p className={styles.company}>{exp.company}</p>
                 <p className={styles.period}>{exp.period}</p>
@@ -31,9 +32,7 @@ export const ExperienceSection = () => {
                   ))}
                 </div>
               </div>
-              {index < experiences.length - 1 && (
-                <div className={styles.timelineLine}></div>
-              )}
+
             </div>
           ))}
         </div>

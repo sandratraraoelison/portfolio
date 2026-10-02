@@ -23,21 +23,29 @@ export const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.logo}>
-          <span className={styles.logoText}>S</span>
-        </div>
+        <a href="#home" className={styles.logo} aria-label="Accueil">
+          <span className={styles.logoText}>S.</span>
+        </a>
 
         <button
           className={styles.mobileMenuButton}
           aria-expanded={menuOpen}
+          aria-controls="portfolio-navigation"
           aria-label={menuOpen ? "Close navigation" : "Open navigation"}
           onClick={() => setMenuOpen((current) => !current)}
+          onKeyDown={(event) => { if (event.key === "Escape") setMenuOpen(false); }}
           type="button"
         >
           <span className={styles.menuIcon} />
         </button>
 
-        <nav className={`${styles.nav} ${menuOpen ? styles.open : ""}`}>
+        <div className={`${styles.navPanel} ${menuOpen ? styles.open : ""}`}>
+        <nav id="portfolio-navigation" className={styles.nav} onKeyDown={(event) => {
+          if (event.key === "Escape") {
+            setMenuOpen(false);
+            document.querySelector<HTMLButtonElement>("button[aria-controls=portfolio-navigation]")?.focus();
+          }
+        }}>
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -49,6 +57,7 @@ export const Header = () => {
             </a>
           ))}
         </nav>
+        </div>
 
         <div className={styles.actions}>
           <ThemeToggle />

@@ -1,0 +1,22 @@
+.pageProgress { position:fixed; top:0; left:0; right:0; height:3px; z-index:110; pointer-events:none; background:var(--primary); transform:scaleX(var(--page-progress, 0)); transform-origin:left; }
+.journey { position:fixed; right:16px; top:50%; translate:0 -50%; z-index:90; width:112px; }
+.caption { display:block; font:9px var(--mono); letter-spacing:.12em; color:var(--text-light); margin-bottom:20px; }
+.steps { position:relative; display:flex; flex-direction:column; gap:16px; }
+.track { position:absolute; left:15px; top:16px; bottom:16px; width:1px; background:var(--border); }
+.track::after { content:""; position:absolute; inset:0; background:var(--primary); transform-origin:top; transform:scaleY(var(--journey-progress, 0)); transition:transform 400ms var(--ease-out); }
+.step { display:flex; gap:9px; align-items:center; position:relative; color:var(--text-light); min-height:32px; }
+.number { display:flex; align-items:center; justify-content:center; flex-shrink:0; width:32px; height:32px; font:10px var(--mono); border:1px solid var(--border); border-radius:50%; background:var(--bg); transition:background-color 250ms ease, border-color 250ms ease, color 250ms ease; }
+.label { font-size:10px; }
+.step[data-reached="true"] .number { border-color:var(--primary); color:var(--primary); }
+.step[aria-current] .number { background:var(--primary); color:var(--bg); }
+.step[aria-current] .label { color:var(--primary); font-weight:600; }
+.step:hover .number { border-color:var(--primary); }
+@media(max-width:1430px) {
+  .journey { right:24px; left:24px; top:auto; bottom:12px; translate:none; width:min(360px,calc(100% - 48px)); margin:auto; background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:10px 14px; box-shadow:var(--shadow); }
+  .caption,.label { display:none; }
+  .steps { flex-direction:row; gap:0; justify-content:space-between; }
+  .track { left:16px; right:16px; top:16px; bottom:auto; width:auto; height:1px; }
+  .track::after { transform-origin:left; transform:scaleX(var(--journey-progress,0)); }
+  .step { width:36px; justify-content:center; }
+}
+@media(prefers-reduced-motion:reduce) { .pageProgress { display:none; } .track::after { transform:none; } }
