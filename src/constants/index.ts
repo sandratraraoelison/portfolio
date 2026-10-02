@@ -7,7 +7,7 @@ export const APP_VERSION = "0.0.1";
 
 // API Configuration
 export const API_BASE_URL =
-  process.env.REACT_APP_API_URL || "https://api.example.com";
+  import.meta.env.VITE_API_URL || "https://api.example.com";
 export const API_TIMEOUT = 10000; // 10 secondes
 
 // Navigation

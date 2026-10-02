@@ -41,11 +41,13 @@ export const todoService = {
   },
 
   createTodo: async (title: string) => {
+    void title
     // À implémenter
     return {} as TodoItem
   },
 
   deleteTodo: async (id: string) => {
+    void id
     // À implémenter
     return true
   },

@@ -3,13 +3,18 @@
  */
 
 export class AppError extends Error {
+  public code: string;
+  public statusCode: number;
+
   constructor(
-    public code: string,
+    code: string,
     message: string,
-    public statusCode: number = 500,
+    statusCode: number = 500,
   ) {
     super(message);
     this.name = "AppError";
+    this.code = code;
+    this.statusCode = statusCode;
   }
 }
 
@@ -30,7 +35,7 @@ export function formatError(error: unknown): string {
  * Logger les erreurs en développement
  */
 export function logError(error: unknown, context?: string): void {
-  if (process.env.NODE_ENV === "development") {
+  if (import.meta.env.DEV) {
     console.error(`[${context || "Error"}]`, error);
   }
 }

@@ -4,7 +4,6 @@
  */
 
 import { API_BASE_URL, API_TIMEOUT } from "../constants";
-import type { ApiResponse } from "../types";
 import { AppError, logError } from "../utils/errorHandling";
 
 interface RequestConfig {

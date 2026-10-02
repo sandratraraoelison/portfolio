@@ -47,7 +47,7 @@ export const ExampleComponent: FC<ExampleComponentProps> = ({
       {/* Affichage des états */}
       {isLoading && <p>{MESSAGES.LOADING}</p>}
       {error && <p className="error">{error.message}</p>}
-      {data && <p className="success">{MESSAGES.SUCCESS}</p>}
+      {data !== null && <p className="success">{MESSAGES.SUCCESS}</p>}
 
       {/* Composant Button réutilisable */}
       <Button variant={variant} onClick={() => execute()} disabled={isLoading}>
@@ -55,7 +55,7 @@ export const ExampleComponent: FC<ExampleComponentProps> = ({
       </Button>
 
       {/* Affichage des données */}
-      {data && (
+      {data !== null && (
         <pre>
           <code>{JSON.stringify(data, null, 2)}</code>
         </pre>
