@@ -63,7 +63,7 @@ export const projects: Project[] = [
     challenge: "Réunir accompagnement personnel et découverte de connexions compatibles dans une expérience privée et cohérente.",
     approach: ["Développer l’application mobile avec Expo et React Native", "Créer la version web avec Next.js", "Structurer l’API NestJS, PostgreSQL et le chat privé en temps réel avec Socket.IO"],
     outcome: "Une expérience accessible sur mobile et sur le web, organisée autour de quatre espaces : Guidance, Insights, Growth et Soul, avec profils, objectifs, suggestions de compatibilité et messagerie privée.",
-    evidence: "Le dépôt local et son README documentent le périmètre et la stack. Aucun indicateur d’usage ou résultat quantifié n’est publié.",
+    evidence: "",
     link: "https://soulmeet-web.vercel.app/",
     translations: {
       en: {
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         challenge: "Bring personal guidance and compatible connections together in one coherent, privacy-aware experience.",
         approach: ["Build the mobile app with Expo and React Native", "Create the web version with Next.js", "Structure the NestJS API and PostgreSQL data, with private real-time chat using Socket.IO"],
         outcome: "An experience available on mobile and web, organized around four connected spaces: Guidance, Insights, Growth, and Soul, with profiles, goals, compatibility suggestions, and private messaging.",
-        evidence: "The local repository and README document the scope and stack. No usage metrics or quantified outcomes are published.",
+        evidence: "",
       },
     },
   },

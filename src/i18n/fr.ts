@@ -19,7 +19,7 @@
   projects: {
     journal: "Carnet de projets / sélection",
     processIntro: "Chaque dossier part d’un contexte réel : le besoin, la démarche, puis ce que les éléments disponibles permettent d’affirmer.",
-    challenge: "Le problème", approach: "La démarche", learning: "Les étapes", evidenceLabel: "Éléments disponibles", process: "Démarche",
+    challenge: "Le problème", approach: "La démarche", outcome: "Le résultat", learning: "Les étapes", evidenceLabel: "Éléments disponibles", process: "Démarche",
     filtersLabel: "Filtrer les dossiers par thème",
     categories: { all: "Tous", web: "Développement web", quality: "Qualité & tests", systems: "Systèmes & support", mobile: "Applications web & mobile" },
     title: "Études de cas", allTitle: "Carnet de projets",

@@ -25,16 +25,16 @@ export const ProjectCase = ({ project }: { project: Project }) => {
             <img src={project.image} alt={t.projects.soulmeetImageAlt} loading="lazy" decoding="async" />
           </figure>
         )}
+        <p className={styles.description}>{content.description}</p>
         <div className={styles.narrative}>
           <div><h4>{t.projects.challenge}</h4><p>{content.challenge}</p></div>
-          <div><h4>{t.projects.approach}</h4><p>{content.outcome}</p></div>
-          <div><h4>{t.projects.learning}</h4><p>{content.approach.join(" · ")}</p></div>
+          <div><h4>{t.projects.outcome}</h4><p>{content.outcome}</p></div>
         </div>
-        <ol className={styles.approach}>{content.approach.map((step) => <li key={step}>{step}</li>)}</ol>
-        <div className={styles.diagram} aria-hidden="true">
-          {content.approach.map((step, index) => <span className={styles.diagramNode} key={step}>{step}{index < content.approach.length - 1 && <span className={styles.diagramArrow} aria-hidden="true"> →</span>}</span>)}
-        </div>
-        <p className={styles.evidence}>{t.projects.evidenceLabel}: {content.evidence}</p>
+        <section className={styles.steps} aria-label={t.projects.learning}>
+          <h4>{t.projects.learning}</h4>
+          <ol className={styles.approach}>{content.approach.map((step) => <li key={step}>{step}</li>)}</ol>
+        </section>
+        {content.evidence && <p className={styles.evidence}>{t.projects.evidenceLabel}: {content.evidence}</p>}
         {(project.link || project.github) && (
           <div className={styles.projectLinks}>
             {project.link && <a href={project.link} target="_blank" rel="noopener noreferrer">{t.projects.viewSite}<span aria-hidden="true">↗</span></a>}

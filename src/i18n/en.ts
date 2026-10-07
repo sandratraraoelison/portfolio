@@ -19,7 +19,7 @@
   projects: {
     journal: "Project field notes / selected work",
     processIntro: "Each case starts with a real context: the need, the approach, and what the available evidence supports.",
-    challenge: "The problem", approach: "The approach", learning: "The steps", evidenceLabel: "Available evidence", process: "Approach",
+    challenge: "The problem", approach: "The approach", outcome: "The outcome", learning: "The steps", evidenceLabel: "Available evidence", process: "Approach",
     filtersLabel: "Filter cases by topic",
     categories: { all: "All cases", web: "Web development", quality: "Quality & testing", systems: "Systems & support", mobile: "Web & mobile apps" },
     title: "Case studies", allTitle: "Project field notes",
