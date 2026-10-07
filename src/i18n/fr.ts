@@ -21,7 +21,7 @@
     processIntro: "Chaque dossier part d’un contexte réel : le besoin, la démarche, puis ce que les éléments disponibles permettent d’affirmer.",
     challenge: "Le problème", approach: "La démarche", learning: "Les étapes", evidenceLabel: "Éléments disponibles", process: "Démarche",
     filtersLabel: "Filtrer les dossiers par thème",
-    categories: { all: "Tous", web: "Développement web", quality: "Qualité & tests", systems: "Systèmes & support", mobile: "Application mobile" },
+    categories: { all: "Tous", web: "Développement web", quality: "Qualité & tests", systems: "Systèmes & support", mobile: "Applications web & mobile" },
     title: "Études de cas", allTitle: "Carnet de projets",
     pageIntro: "Des études de cas construites à partir de mon parcours professionnel et académique.", pageDescription: "",
     backToHome: "Retour à l’accueil", viewSite: "Voir la démo", github: "Code source", viewAll: "Voir tous les dossiers →",
