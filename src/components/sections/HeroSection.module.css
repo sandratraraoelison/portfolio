@@ -10,7 +10,6 @@
 .actions { display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:32px; }
 .cvLink { display:inline-flex; align-items:center; gap:10px; border:1px solid var(--border); padding:12px 16px; color:var(--primary); border-radius:8px; font-weight:600; transition:border-color var(--transition), background var(--transition); }
 .cvLink:hover { border-color:var(--primary); background:var(--accent-soft); }
-.cvTextLink { color:var(--text-light); font-size:.85rem; text-decoration:underline; text-underline-offset:4px; }
 .stats { display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--border); padding-top:26px; margin-top:48px; gap:16px; }
 .stat { display:flex; flex-direction:column; gap:4px; }
 .number { font-size:1.8rem; line-height:1.2; font-weight:600; letter-spacing:-.05em; }

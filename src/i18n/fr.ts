@@ -4,7 +4,7 @@
     greeting: "Je cherche la panne. Je fiabilise le produit.",
     title: "Sandratra Rolando RAOELISON", subtitle: "Développeur Fullstack JS / TypeScript",
     description: "Du code au correctif validé : j’aime comprendre pourquoi une fonctionnalité casse, puis la rendre fiable.",
-    location: "Antananarivo, Madagascar · Ouvert aux opportunités", cta1: "Explorer les dossiers", cta2: "Télécharger CV", otherCv: "English CV",
+    location: "Antananarivo, Madagascar · Ouvert aux opportunités", cta1: "Explorer les dossiers", cta2: "Télécharger mon CV",
     experience: "ans d’expérience", roles: "expériences professionnelles", academicProjects: "projets académiques",
   },
   about: {

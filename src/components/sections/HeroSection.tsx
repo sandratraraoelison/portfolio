@@ -62,13 +62,6 @@ export const HeroSection = () => {
             >
               {t.hero.cta2} <span aria-hidden="true">↓</span>
             </a>
-            <a
-              className={styles.cvTextLink}
-              href={language === "fr" ? "/Sandratra-Raoelison-CV-EN-2026.pdf" : "/Sandratra-Raoelison-CV-FR-2026.pdf"}
-              download
-            >
-              {t.hero.otherCv}
-            </a>
           </div>
 
           <div className={styles.stats}>
