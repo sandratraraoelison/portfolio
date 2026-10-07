@@ -78,14 +78,14 @@ export const ContactSection = () => {
                 <h3>{t.contact.networks}</h3>
                 <div className={styles.socialLinks}>
                   <a
-                    href="https://github.com"
+                    href="https://github.com/sandratraraoelison"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     GitHub
                   </a>
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/sandratra-raoelison-55815a175"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

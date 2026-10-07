@@ -19,7 +19,14 @@ export const Footer = () => {
 
         <div className={styles.links}>
           <a
-            href="https://linkedin.com"
+            href="https://github.com/sandratraraoelison"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/sandratra-raoelison-55815a175"
             target="_blank"
             rel="noopener noreferrer"
           >
