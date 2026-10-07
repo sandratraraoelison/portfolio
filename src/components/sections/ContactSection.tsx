@@ -14,7 +14,7 @@ export const ContactSection = () => {
     email: "",
     message: "",
   });
-  const [submitted, setSubmitted] = useState(false);
+  const [draftReady, setDraftReady] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -26,15 +26,16 @@ export const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Ici on peut ajouter la logique d'envoi
-    console.log("Form submitted:", formData);
-    setSubmitted(true);
-    setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" });
-      setSubmitted(false);
-    }, 3000);
+    const subject = encodeURIComponent(`Portfolio contact — ${formData.name}`);
+    const body = encodeURIComponent(
+      `${formData.message}\n\n— ${formData.name}\n${formData.email}`,
+    );
+    setDraftReady(true);
+    window.location.assign(
+      `mailto:raoelisonsandratra@gmail.com?subject=${subject}&body=${body}`,
+    );
   };
 
   return (
@@ -46,7 +47,7 @@ export const ContactSection = () => {
         <div className={styles.content}>
           <div className={styles.info} data-motion>
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>@</span>
+              <span className={styles.infoIcon} aria-hidden="true">@</span>
               <div>
                 <h3>{t.contact.email}</h3>
                 <a href="mailto:raoelisonsandratra@gmail.com">
@@ -56,7 +57,7 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>↗</span>
+              <span className={styles.infoIcon} aria-hidden="true">↗</span>
               <div>
                 <h3>{t.contact.phone}</h3>
                 <p>{t.contact.phoneValue}</p>
@@ -64,7 +65,7 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>⌖</span>
+              <span className={styles.infoIcon} aria-hidden="true">⌖</span>
               <div>
                 <h3>{t.contact.location}</h3>
                 <p>{t.contact.locationValue}</p>
@@ -72,7 +73,7 @@ export const ContactSection = () => {
             </div>
 
             <div className={styles.infoItem}>
-              <span className={styles.infoIcon}>↗</span>
+              <span className={styles.infoIcon} aria-hidden="true">↗</span>
               <div>
                 <h3>{t.contact.networks}</h3>
                 <div className={styles.socialLinks}>
@@ -95,7 +96,8 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <form className={styles.form} data-motion data-motion-delay="100" onSubmit={handleSubmit}>
+          <form className={styles.form} data-motion data-motion-delay="100" onSubmit={handleSubmit} aria-describedby="contact-mailto-note">
+            <p className={styles.formNote} id="contact-mailto-note">{t.contact.mailtoNote}</p>
             <div className={styles.formGroup}>
               <label htmlFor="name">{t.contact.name}</label>
               <input
@@ -105,6 +107,8 @@ export const ContactSection = () => {
                 value={formData.name}
                 onChange={handleChange}
                 required
+                autoComplete="name"
+                autoCapitalize="words"
               />
             </div>
 
@@ -117,6 +121,8 @@ export const ContactSection = () => {
                 value={formData.email}
                 onChange={handleChange}
                 required
+                autoComplete="email"
+                autoCapitalize="none"
               />
             </div>
 
@@ -136,8 +142,8 @@ export const ContactSection = () => {
               {t.contact.send}
             </Button>
 
-            {submitted && (
-              <p className={styles.successMessage}>{t.contact.success}</p>
+            {draftReady && (
+              <p className={styles.successMessage} role="status" aria-live="polite">{t.contact.draftReady}</p>
             )}
           </form>
         </div>

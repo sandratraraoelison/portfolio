@@ -1,5 +1,5 @@
 ﻿export const fr = {
-  nav: { about: "À propos", skills: "Compétences", projects: "Projets", experience: "Expérience", contact: "Contact" },
+  nav: { about: "À propos", skills: "Compétences", projects: "Projets", experience: "Expérience", contact: "Contact", openMenu: "Ouvrir le menu", closeMenu: "Fermer le menu" },
   hero: {
     greeting: "Je cherche la panne. Je fiabilise le produit.",
     title: "Sandratra Rolando RAOELISON", subtitle: "Développeur Fullstack JS / TypeScript",
@@ -21,10 +21,11 @@
     processIntro: "Chaque dossier part d’un contexte réel : le besoin, la démarche, puis ce que les éléments disponibles permettent d’affirmer.",
     challenge: "Le problème", approach: "La démarche", learning: "Les étapes", evidenceLabel: "Éléments disponibles", process: "Démarche",
     filtersLabel: "Filtrer les dossiers par thème",
-    categories: { all: "Tous", web: "Développement web", quality: "Qualité & tests", systems: "Systèmes & support" },
+    categories: { all: "Tous", web: "Développement web", quality: "Qualité & tests", systems: "Systèmes & support", mobile: "Application mobile" },
     title: "Études de cas", allTitle: "Carnet de projets",
     pageIntro: "Des études de cas construites à partir de mon parcours professionnel et académique.", pageDescription: "",
-    backToHome: "Retour à l’accueil", viewSite: "Voir le site", github: "GitHub", viewAll: "Voir tous les dossiers →",
+    backToHome: "Retour à l’accueil", viewSite: "Voir la démo", github: "Code source", viewAll: "Voir tous les dossiers →",
+    soulmeetImageAlt: "Illustration officielle de Soulmeet montrant une personne accompagnée par son coach numérique",
   },
   experience: {
     title: "Parcours professionnel", education: "Formation & projets d’exploration",
@@ -34,8 +35,11 @@
   },
   contact: {
     title: "Parlons de votre prochain défi", subtitle: "Un produit à faire évoluer ou une anomalie à élucider ? Écrivez-moi.",
+    mailtoNote: "Votre application de messagerie s’ouvrira avec le message prêt à envoyer.",
+    draftReady: "Votre message est préparé dans votre application de messagerie. Vérifiez-le puis envoyez-le depuis celle-ci.",
     email: "Email", emailValue: "raoelisonsandratra@gmail.com", phone: "Téléphone", phoneValue: "+261 34 76 883 76",
-    location: "Localisation", locationValue: "Antananarivo, Madagascar", networks: "Réseaux", name: "Nom", message: "Message", send: "Envoyer", success: "Message envoyé avec succès !",
+    location: "Localisation", locationValue: "Antananarivo, Madagascar", networks: "Réseaux", name: "Nom", message: "Message", send: "Préparer le courriel",
   },
   footer: { rights: "Tous droits réservés." },
+  accessibility: { switchToDark: "Activer le thème sombre", switchToLight: "Activer le thème clair", chooseLanguage: "Choisir la langue" },
 };

@@ -17,14 +17,18 @@
 .infoItem a { overflow-wrap:anywhere; }
 .infoItem a:hover { color:var(--primary); text-decoration:underline; }
 .socialLinks { display:flex; gap:24px; }
-.form { display:flex; flex-direction:column; gap:22px; }
+.form { display:flex; flex-direction:column; gap:22px; min-width:0; }
+.formNote { color:var(--text-light); font-size:.88rem; }
 .formGroup { display:flex; flex-direction:column; gap:8px; }
 .formGroup label { font-size:.85rem; font-weight:600; }
-.formGroup input,.formGroup textarea { width:100%; padding:14px 16px; border:1px solid var(--border); background:var(--surface); color:var(--text); border-radius:6px; }
+.formGroup input,.formGroup textarea { width:100%; min-height:48px; padding:14px 16px; border:1px solid var(--border); background:var(--surface); color:var(--text); border-radius:6px; font-size:1rem; }
 .formGroup textarea { resize:vertical; min-height:140px; }
-.successMessage { color:var(--primary); }
+.successMessage { color:var(--primary); font-weight:600; }
+.infoIcon { display:flex; align-items:center; justify-content:center; min-height:44px; }
+.socialLinks a { display:inline-flex; align-items:center; min-height:44px; }
 @media(max-width:750px) { .content { grid-template-columns:1fr; gap:40px; } }
 
 .formGroup input,.formGroup textarea { transition:border-color var(--motion-fast) ease, background-color var(--motion-fast) ease; }
 .formGroup input:hover,.formGroup textarea:hover { border-color:var(--text-light); }
 .formGroup input:focus,.formGroup textarea:focus { border-color:var(--primary); }
+@media(max-width:480px) { .contact { padding-inline:20px; } .content { gap:32px; } .form { gap:18px; } .formGroup textarea { min-height:120px; } }

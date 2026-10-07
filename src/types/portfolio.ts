@@ -14,12 +14,15 @@ export interface Project {
   link?: string;
   github?: string;
   featured: boolean;
-  category: "web" | "quality" | "systems";
+  category: "web" | "quality" | "systems" | "mobile";
   context: string;
   challenge: string;
   approach: string[];
   outcome: string;
   evidence: string;
+  translations?: {
+    en?: Partial<Pick<Project, "title" | "description" | "context" | "challenge" | "approach" | "outcome" | "evidence">>;
+  };
 }
 
 export interface Experience {

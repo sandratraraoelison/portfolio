@@ -31,7 +31,7 @@ export const Header = () => {
           className={styles.mobileMenuButton}
           aria-expanded={menuOpen}
           aria-controls="portfolio-navigation"
-          aria-label={menuOpen ? "Close navigation" : "Open navigation"}
+          aria-label={menuOpen ? t.nav.closeMenu : t.nav.openMenu}
           onClick={() => setMenuOpen((current) => !current)}
           onKeyDown={(event) => { if (event.key === "Escape") setMenuOpen(false); }}
           type="button"

@@ -6,7 +6,7 @@
 .navLink:hover { color:var(--primary); }
 .actions { display:flex; align-items:center; gap:12px; }
 .contactBtn { background:var(--primary); color:var(--bg); padding:10px 18px; font-size:.8rem; border-radius:6px; font-weight:600; }
-.mobileMenuButton { display:none; width:40px; height:40px; border:1px solid var(--border); background:var(--surface); color:var(--text); border-radius:6px; cursor:pointer; }
+.mobileMenuButton { display:none; width:44px; height:44px; border:1px solid var(--border); background:var(--surface); color:var(--text); border-radius:6px; cursor:pointer; }
 .menuIcon,.menuIcon::before,.menuIcon::after { display:block; height:2px; width:18px; background:currentColor; position:relative; }
 .menuIcon::before,.menuIcon::after { content:''; position:absolute; left:0; } .menuIcon::before { top:-6px; } .menuIcon::after { top:6px; }
 @media(max-width:1000px) { .container { gap:16px; } .nav { gap:14px; } .contactBtn { display:none; } }

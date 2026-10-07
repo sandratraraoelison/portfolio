@@ -1,5 +1,5 @@
 ﻿export const en = {
-  nav: { about: "About", skills: "Skills", projects: "Projects", experience: "Experience", contact: "Contact" },
+  nav: { about: "About", skills: "Skills", projects: "Projects", experience: "Experience", contact: "Contact", openMenu: "Open menu", closeMenu: "Close menu" },
   hero: {
     greeting: "I find the fault. I make the product reliable.",
     title: "Sandratra Rolando RAOELISON", subtitle: "Full-Stack JavaScript / TypeScript Developer",
@@ -21,10 +21,11 @@
     processIntro: "Each case starts with a real context: the need, the approach, and what the available evidence supports.",
     challenge: "The problem", approach: "The approach", learning: "The steps", evidenceLabel: "Available evidence", process: "Approach",
     filtersLabel: "Filter cases by topic",
-    categories: { all: "All cases", web: "Web development", quality: "Quality & testing", systems: "Systems & support" },
+    categories: { all: "All cases", web: "Web development", quality: "Quality & testing", systems: "Systems & support", mobile: "Mobile app" },
     title: "Case studies", allTitle: "Project field notes",
     pageIntro: "Case studies drawn from my professional and academic experience.", pageDescription: "",
-    backToHome: "Back to home", viewSite: "View site", github: "GitHub", viewAll: "View all cases →",
+    backToHome: "Back to home", viewSite: "Open demo", github: "Source code", viewAll: "View all cases →",
+    soulmeetImageAlt: "Official Soulmeet illustration showing a person talking with a digital coach",
   },
   experience: {
     title: "Professional experience", education: "Education & explorations",
@@ -34,8 +35,11 @@
   },
   contact: {
     title: "Let’s talk about your next challenge", subtitle: "A product to improve or an issue to investigate? Get in touch.",
+    mailtoNote: "Your email app will open with the message ready to send.",
+    draftReady: "Your message is ready in your email app. Review it and send it there.",
     email: "Email", emailValue: "raoelisonsandratra@gmail.com", phone: "Phone", phoneValue: "+261 34 76 883 76",
-    location: "Location", locationValue: "Antananarivo, Madagascar", networks: "Networks", name: "Name", message: "Message", send: "Send", success: "Message sent successfully!",
+    location: "Location", locationValue: "Antananarivo, Madagascar", networks: "Networks", name: "Name", message: "Message", send: "Prepare email",
   },
   footer: { rights: "All rights reserved." },
+  accessibility: { switchToDark: "Switch to dark theme", switchToLight: "Switch to light theme", chooseLanguage: "Choose language" },
 };

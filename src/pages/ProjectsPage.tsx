@@ -28,7 +28,7 @@ export const ProjectsPage = () => {
 
       <section className={styles.gridSection} aria-label={t.projects.filtersLabel}>
         <div className={styles.filters} role="group" aria-label={t.projects.filtersLabel}>
-          {(["all", "web", "quality", "systems"] as const).map((key) => (
+          {(["all", "web", "quality", "systems", "mobile"] as const).map((key) => (
             <button key={key} type="button" className={category === key ? styles.activeFilter : styles.filter} aria-pressed={category === key} onClick={() => setCategory(key)}>
               {t.projects.categories[key]}
             </button>
