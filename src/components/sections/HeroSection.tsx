@@ -3,7 +3,7 @@
  */
 
 import { useTranslation } from "../../hooks/useTranslation";
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/useLanguage";
 import { experiences } from "../../data/experience";
 import { Typewriter } from "../common/Typewriter";
 import { Button } from "../common/Button";
@@ -26,22 +26,6 @@ const getExperienceYears = () => {
   return Math.max(1, currentYear - earliest);
 };
 
-const downloadCV = (language: string) => {
-  const cvFileName =
-    language === "fr"
-      ? "CV RAOELISON Sandratra-fr.pdf"
-      : "CV RAOELISON Sandratra-en .pdf";
-
-  const link = document.createElement("a");
-  link.href = encodeURI(
-    `/CV RAOELISON Sandratra-${language === "fr" ? "fr" : "en "}.pdf`,
-  );
-  link.download = cvFileName;
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-};
-
 export const HeroSection = () => {
   const t = useTranslation();
   const { language } = useLanguage();
@@ -56,6 +40,10 @@ export const HeroSection = () => {
           <p className={styles.subtitle}><span className={styles.prompt} aria-hidden="true">&gt; </span><Typewriter text={t.hero.subtitle} delay={1600} duration={900} /></p>
 
           <p className={styles.description}>{t.hero.description}</p>
+          <div className={styles.availability}>
+            <span className={styles.availabilityDot} aria-hidden="true" />
+            {t.hero.location}
+          </div>
 
           <div className={styles.actions}>
             <Button
@@ -67,13 +55,20 @@ export const HeroSection = () => {
             >
               {t.hero.cta1}
             </Button>
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={() => downloadCV(language)}
+            <a
+              className={styles.cvLink}
+              href={language === "fr" ? "/Sandratra-Raoelison-CV-FR-2026.pdf" : "/Sandratra-Raoelison-CV-EN-2026.pdf"}
+              download
             >
-              {t.hero.cta2}
-            </Button>
+              {t.hero.cta2} <span aria-hidden="true">↓</span>
+            </a>
+            <a
+              className={styles.cvTextLink}
+              href={language === "fr" ? "/Sandratra-Raoelison-CV-EN-2026.pdf" : "/Sandratra-Raoelison-CV-FR-2026.pdf"}
+              download
+            >
+              {t.hero.otherCv}
+            </a>
           </div>
 
           <div className={styles.stats}>
@@ -82,12 +77,8 @@ export const HeroSection = () => {
               <span className={styles.label}>{t.hero.experience}</span>
             </div>
             <div className={styles.stat}>
-              <span className={styles.number}>20+</span>
-              <span className={styles.label}>{t.hero.projects}</span>
-            </div>
-            <div className={styles.stat}>
-              <span className={styles.number}>100%</span>
-              <span className={styles.label}>{t.hero.passion}</span>
+              <span className={styles.number}>3</span>
+              <span className={styles.label}>{t.hero.academicProjects}</span>
             </div>
           </div>
         </div>
@@ -109,7 +100,7 @@ export const HeroSection = () => {
               <p className={styles.command}><span className={styles.terminalPrompt} aria-hidden="true">$ </span><Typewriter text="developer.build()" delay={3700} duration={700} /></p>
               <div className={styles.terminalFooter}>
                 <span className={styles.statusDot} aria-hidden="true" />
-                <span>{language === "fr" ? "Du code aux interfaces." : "From code to interfaces."}</span>
+              <span>{language === "fr" ? "Analyser · construire · vérifier" : "Analyze · build · verify"}</span>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@
  * Composant ThemeToggle - Bascule light/dark
  */
 
-import { useTheme } from "../../context/ThemeContext";
+import { useTheme } from "../../context/useTheme";
 import styles from "./ThemeToggle.module.css";
 
 export const ThemeToggle = () => {

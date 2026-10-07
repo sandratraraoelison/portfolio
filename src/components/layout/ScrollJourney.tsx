@@ -1,5 +1,5 @@
 import { useTranslation } from "../../hooks/useTranslation";
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/useLanguage";
 import styles from "./ScrollJourney.module.css";
 
 export const ScrollJourney = () => {

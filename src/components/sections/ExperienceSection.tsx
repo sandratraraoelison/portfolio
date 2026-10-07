@@ -36,6 +36,16 @@ export const ExperienceSection = () => {
             </div>
           ))}
         </div>
+        <div className={styles.education} data-motion>
+          <p className={styles.educationEyebrow}>{t.experience.education}</p>
+          <h3>{t.experience.educationTitle}</h3>
+          <p className={styles.educationPlace}>{t.experience.educationPlace}</p>
+          <ul className={styles.educationProjects}>
+            <li>{t.experience.educationProject1}</li>
+            <li>{t.experience.educationProject2}</li>
+            <li>{t.experience.educationProject3}</li>
+          </ul>
+        </div>
       </div>
     </section>
   );

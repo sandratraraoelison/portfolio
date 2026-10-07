@@ -46,7 +46,7 @@ export function useAsync<T>(
   // Exécute la fonction au montage si immediate est true
   useEffect(() => {
     if (immediate) {
-      execute();
+      void Promise.resolve().then(execute).catch(() => undefined);
     }
   }, [execute, immediate]);
 

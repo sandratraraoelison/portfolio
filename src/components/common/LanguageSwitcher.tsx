@@ -2,7 +2,7 @@
  * Composant LanguageSwitcher - Bascule FR/EN
  */
 
-import { useLanguage } from "../../context/LanguageContext";
+import { useLanguage } from "../../context/useLanguage";
 import type { Language } from "../../i18n";
 import styles from "./LanguageSwitcher.module.css";
 

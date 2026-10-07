@@ -19,13 +19,6 @@ export const Footer = () => {
 
         <div className={styles.links}>
           <a
-            href="https://github.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
-          <a
             href="https://linkedin.com"
             target="_blank"
             rel="noopener noreferrer"

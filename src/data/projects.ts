@@ -1,44 +1,54 @@
-/**
- * Données des projets
- */
-
-import type { Project } from "../types/portfolio";
+﻿import type { Project } from "../types/portfolio";
 
 export const projects: Project[] = [
   {
-    id: "1",
-    title: "Maintenance applicative",
-    description:
-      "Support et débogage d'applications internes pour garantir la stabilité et les performances.",
-    image: "/projects/ecommerce.jpg",
-    technologies: ["JavaScript", "Node.js", "Maintenance"],
-    featured: true,
+    id: "1", title: "Fiabiliser une application web",
+    description: "Enquête sur les anomalies, correction ciblée et validation des évolutions applicatives.", image: "",
+    technologies: ["JavaScript", "Node.js", "Tests fonctionnels", "Débogage"], featured: true, category: "quality",
+    context: "UBITIK · Développeur / Testeur · Depuis février 2023",
+    challenge: "Comprendre les incidents signalés et sécuriser les fonctionnalités avant leur mise à disposition.",
+    approach: ["Reproduire le cas rapporté", "Analyser le comportement attendu", "Valider le correctif et les régressions"],
+    outcome: "Contribution au contrôle qualité et au suivi des améliorations applicatives.",
+    evidence: "Le CV décrit les activités et le rôle; aucun indicateur chiffré ni lien public de démonstration n’y est fourni.",
   },
   {
-    id: "2",
-    title: "Développement WordPress",
-    description:
-      "Création et optimisation de sites WordPress, intégration de modules et améliorations back-end.",
-    image: "/projects/tasks.jpg",
-    technologies: ["PHP", "WordPress", "MySQL"],
-    featured: true,
+    id: "2", title: "Étendre un site WordPress",
+    description: "Développement back-end et intégration de modules au sein d’une mission courte.", image: "",
+    technologies: ["PHP", "WordPress"], featured: true, category: "web",
+    context: "MAKI AGENCY · Développeur PHP / WordPress · novembre 2022 – janvier 2023",
+    challenge: "Adapter le back-end WordPress aux besoins applicatifs et corriger les problèmes rencontrés.",
+    approach: ["Intervenir sur le back-end", "Intégrer les modules nécessaires", "Participer aux corrections applicatives"],
+    outcome: "Expérience de développement PHP / WordPress et de contribution aux corrections.",
+    evidence: "Périmètre confirmé par le CV; les fonctionnalités livrées ne sont pas détaillées.",
   },
   {
-    id: "3",
-    title: "Conseil IT & réseaux",
-    description:
-      "Conseil informatique et maintenance des réseaux pour assurer un fonctionnement fluide des infrastructures.",
-    image: "/projects/dashboard.jpg",
-    technologies: ["Support", "Réseaux", "Maintenance"],
-    featured: true,
+    id: "3", title: "Support IT et maintenance réseau",
+    description: "Une première expérience à l’interface entre assistance technique, développement et infrastructure.", image: "",
+    technologies: ["Support technique", "Réseaux", "Maintenance"], featured: true, category: "systems",
+    context: "NOVOCOMM OGILVY · Conseil en informatique · 2019–2020",
+    challenge: "Contribuer à la continuité de l’environnement informatique et accompagner les besoins techniques.",
+    approach: ["Assister les utilisateurs", "Participer au développement logiciel", "Maintenir les réseaux"],
+    outcome: "Expérience combinant conseil IT, assistance et maintenance des réseaux.",
+    evidence: "Activités et période issues du CV; aucun résultat quantifié n’est indiqué.",
   },
   {
-    id: "4",
-    title: "Missions freelance",
-    description:
-      "Prestations ponctuelles en développement web et résolution de bugs pour des clients variés.",
-    image: "/projects/portfolio.jpg",
-    technologies: ["JavaScript", "PHP", "WordPress"],
-    featured: false,
+    id: "4", title: "Missions freelance de développement",
+    description: "Missions ponctuelles façonnées selon les besoins de développement et de maintenance des clients.", image: "",
+    technologies: ["React.js", "Next.js", "Node.js", "PHP"], featured: false, category: "web",
+    context: "Freelance · Développeur · 2020–2022",
+    challenge: "Répondre à des demandes client variables avec des interventions adaptées au besoin.",
+    approach: ["Clarifier la demande", "Développer ou maintenir la solution", "Déboguer selon les retours"],
+    outcome: "Missions ponctuelles de développement, maintenance et débogage.",
+    evidence: "Le CV confirme les types de missions et les technologies; clients et livrables ne sont pas nommés.",
+  },
+  {
+    id: "5", title: "Explorer les systèmes connectés",
+    description: "Projets académiques qui relient informatique, électronique, énergie et communication.", image: "",
+    technologies: ["IoT", "Gestion énergétique", "Transmission laser"], featured: false, category: "systems",
+    context: "ISPM · Licence en électronique, systèmes informatiques et intelligence artificielle · 2017–2018",
+    challenge: "Étudier comment mesurer, comprendre ou transmettre des informations dans des systèmes physiques.",
+    approach: ["Simuler un système IoT", "Étudier la consommation énergétique domestique", "Explorer la transmission de données par la lumière"],
+    outcome: "Trois axes de projets académiques mentionnés dans le CV.",
+    evidence: "Le CV ne donne ni détails d’implémentation ni mesures; les visuels sont des schémas explicatifs, pas des captures de prototypes.",
   },
 ];

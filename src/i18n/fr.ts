@@ -1,77 +1,41 @@
-/**
- * Traductions en Français
- */
-
-export const fr = {
-  nav: {
-    about: "À propos",
-    skills: "Compétences",
-    projects: "Projets",
-    experience: "Expérience",
-    contact: "Contact",
-  },
+﻿export const fr = {
+  nav: { about: "À propos", skills: "Compétences", projects: "Projets", experience: "Expérience", contact: "Contact" },
   hero: {
-    greeting: "Bonjour, je suis",
-    title: "Sandratra Rolando RAOELISON",
-    subtitle: "Développeur Fullstack JS",
-    description:
-      "Scientifique de formation, je travaille à l'environnement informatique (matériel et logiciels) de manière académique et autodidacte. Mon objectif principal est de faire évoluer mon expertise vers une structure majeure par mes propres moyens.",
-    cta1: "Voir mes projets",
-    cta2: "Télécharger CV",
-    experience: "ans d'expérience",
-    projects: "projets réalisés",
-    passion: "passion UX/UI",
+    greeting: "Je cherche la panne. Je fiabilise le produit.",
+    title: "Sandratra Rolando RAOELISON", subtitle: "Développeur Fullstack JS / TypeScript",
+    description: "Du code au correctif validé : j’aime comprendre pourquoi une fonctionnalité casse, puis la rendre fiable.",
+    location: "Antananarivo, Madagascar · Ouvert aux opportunités", cta1: "Explorer les dossiers", cta2: "Télécharger CV", otherCv: "English CV",
+    experience: "ans d’expérience", roles: "expériences professionnelles", academicProjects: "projets académiques",
   },
   about: {
     title: "À propos",
-    description:
-      "Scientifique de formation, je suis spécialisé dans l'environnement informatique, tant sur le matériel que sur les logiciels, avec une approche académique et autodidacte.",
-    description2:
-      "J'accompagne les projets avec professionnalisme et rigueur afin de contribuer à la transformation digitale, à la maintenance et à la performance des systèmes.",
-    performance: "Informatique",
-    performanceDesc: "Maîtrise du matériel et des logiciels",
-    design: "Autonomie",
-    designDesc: "Apprentissage continu et adaptation rapide",
-    innovation: "Ambition",
-    innovationDesc: "Volonté d'évoluer vers des missions à fort impact",
+    description: "Mon parcours en électronique, systèmes informatiques et intelligence artificielle m’a appris à regarder un produit dans son ensemble : comprendre le besoin, analyser le problème et construire une solution fiable.",
+    description2: "Chez UBITIK, je développe et maintiens des applications web, reproduis les anomalies signalées et valide les corrections par des tests fonctionnels et de non-régression.",
+    performance: "Construire", performanceDesc: "React, Next.js, Node.js et API REST",
+    design: "Fiabiliser", designDesc: "Débogage, validation et tests fonctionnels",
+    innovation: "Explorer", innovationDesc: "IoT, gestion de l’énergie et transmission laser",
   },
-  skills: {
-    title: "Compétences",
-    frontend: "Frontend",
-    backend: "Backend",
-    tools: "Outils",
-  },
+  skills: { title: "Compétences", frontend: "Frontend", backend: "Backend", tools: "Outils" },
   projects: {
-    title: "Projets en vedette",
-    allTitle: "Tous les projets",
-    pageIntro:
-      "Découvrez tous mes projets, y compris les réalisations front-end, back-end et fullstack.",
-    pageDescription:
-      "Parcourez des applications modernes, des dashboards, des API et des expériences utilisateur optimisées.",
-    backToHome: "Retour à l'accueil",
-    viewSite: "Voir le site",
-    github: "GitHub",
-    viewAll: "Voir tous les projets →",
+    journal: "Carnet de projets / sélection",
+    processIntro: "Chaque dossier part d’un contexte réel : le besoin, la démarche, puis ce que les éléments disponibles permettent d’affirmer.",
+    challenge: "Le problème", approach: "La démarche", learning: "Les étapes", evidenceLabel: "Éléments disponibles", process: "Démarche",
+    filtersLabel: "Filtrer les dossiers par thème",
+    categories: { all: "Tous", web: "Développement web", quality: "Qualité & tests", systems: "Systèmes & support" },
+    title: "Études de cas", allTitle: "Carnet de projets",
+    pageIntro: "Des études de cas construites à partir de mon parcours professionnel et académique.", pageDescription: "",
+    backToHome: "Retour à l’accueil", viewSite: "Voir le site", github: "GitHub", viewAll: "Voir tous les dossiers →",
   },
   experience: {
-    title: "Expérience",
+    title: "Parcours professionnel", education: "Formation & projets d’exploration",
+    educationTitle: "Licence en électronique, systèmes informatiques et intelligence artificielle",
+    educationPlace: "Institut Supérieur Polytechnique de Madagascar · Mention Très bien · 2017–2018",
+    educationProject1: "Simulation de l’Internet des objets", educationProject2: "Étude de la consommation énergétique domestique", educationProject3: "Transmission de données par laser",
   },
   contact: {
-    title: "Commençons un projet",
-    subtitle: "Avez-vous une idée de projet ? Contactez-moi pour en discuter.",
-    email: "Email",
-    emailValue: "raoelisonsandratra@gmail.com",
-    phone: "Téléphone",
-    phoneValue: "+261 34 76 883 76",
-    location: "Localisation",
-    locationValue: "IVY 80 BIS Anosipatrana",
-    networks: "Réseaux",
-    name: "Nom",
-    message: "Message",
-    send: "Envoyer",
-    success: "✅ Message envoyé avec succès !",
+    title: "Parlons de votre prochain défi", subtitle: "Un produit à faire évoluer ou une anomalie à élucider ? Écrivez-moi.",
+    email: "Email", emailValue: "raoelisonsandratra@gmail.com", phone: "Téléphone", phoneValue: "+261 34 76 883 76",
+    location: "Localisation", locationValue: "Antananarivo, Madagascar", networks: "Réseaux", name: "Nom", message: "Message", send: "Envoyer", success: "Message envoyé avec succès !",
   },
-  footer: {
-    rights: "Tous droits réservés.",
-  },
+  footer: { rights: "Tous droits réservés." },
 };

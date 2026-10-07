@@ -15,8 +15,14 @@
 .period { grid-column:2; grid-row:1; font:13px var(--mono); color:var(--text-light); }
 .description { grid-column:1/-1; color:var(--text-light); max-width:80ch; }
 .technologies { grid-column:1/-1; display:flex; gap:10px; flex-wrap:wrap; }
+.education { margin:52px 0 0 38px; padding:28px 32px; border:1px solid var(--border); border-radius:var(--radius); background:var(--surface); }
+.educationEyebrow { color:var(--primary); font:12px var(--mono); letter-spacing:.08em; text-transform:uppercase; margin-bottom:14px; }
+.education h3 { font-size:1.35rem; max-width:36ch; }
+.educationPlace { color:var(--text-light); margin-top:8px; }
+.educationProjects { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; list-style:none; }
+.educationProjects li { padding:6px 10px; border-radius:5px; background:var(--accent-soft); color:var(--primary); font-size:.85rem; }
 .tech { font:12px var(--mono); padding:5px 9px; background:var(--accent-soft); color:var(--primary); border-radius:4px; }
-@media(max-width:600px) { .timelineContent { grid-template-columns:1fr; } .period { grid-column:1; grid-row:auto; } }
+@media(max-width:600px) { .timelineContent { grid-template-columns:1fr; } .period { grid-column:1; grid-row:auto; } .education { margin-left:20px; padding:22px; } }
 
 .timeline { position:relative; }
 .timelineTrack { position:absolute; left:0; top:10px; width:2px; height:var(--track-length, 0px); background:var(--border); }

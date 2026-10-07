@@ -1,8 +1,4 @@
-/**
- * Types pour les données du portfolio
- */
-
-export interface Skill {
+﻿export interface Skill {
   id: string;
   name: string;
   category: "frontend" | "backend" | "tools";
@@ -18,6 +14,12 @@ export interface Project {
   link?: string;
   github?: string;
   featured: boolean;
+  category: "web" | "quality" | "systems";
+  context: string;
+  challenge: string;
+  approach: string[];
+  outcome: string;
+  evidence: string;
 }
 
 export interface Experience {
