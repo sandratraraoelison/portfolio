@@ -12,6 +12,9 @@ export const ProjectCase = ({ project }: { project: Project }) => {
   return (
     <details className={styles.case}>
       <summary className={styles.summary}>
+        <svg className={styles.borderTrace} aria-hidden="true" focusable="false">
+          <rect className={styles.borderPath} x="0.5" y="0.5" pathLength="1" />
+        </svg>
         <span className={styles.index}>CASE / {project.id.padStart(2, "0")}<span className={styles.category}>{label}</span></span>
         <span className={styles.mainInfo}>
           <span className={styles.summaryTitle}>{content.title}</span>
