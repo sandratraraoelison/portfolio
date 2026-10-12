@@ -36,10 +36,8 @@ export const Footer = () => {
         </div>
 
         <div className={styles.copyright}>
-          {t.footer.rights}
           <p>
-            &copy; {currentYear} Sandratra Rolando RAOELISON. Tous droits
-            réservés.
+            &copy; {currentYear} Sandratra Rolando RAOELISON. {t.footer.rights}
           </p>
         </div>
       </div>
