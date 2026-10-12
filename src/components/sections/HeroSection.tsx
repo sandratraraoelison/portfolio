@@ -68,11 +68,13 @@ export const HeroSection = () => {
             <div className={styles.stat}>
               <span className={styles.number}>{experienceYears}+</span>
               <span className={styles.label}>{t.hero.experience}</span>
+              <span className={styles.statDetail}>{t.hero.experienceDetail}</span>
             </div>
-            <div className={styles.stat}>
-              <span className={styles.number}>3</span>
-              <span className={styles.label}>{t.hero.academicProjects}</span>
-            </div>
+            <a className={`${styles.stat} ${styles.statLink}`} href="#skills">
+              <span className={styles.expertiseTitle}>{t.hero.expertiseTitle}<span className={styles.statArrow} aria-hidden="true">↗</span></span>
+              <span className={styles.label}>{t.hero.expertiseLabel}</span>
+              <span className={styles.statDetail}>{t.hero.expertiseDetail}</span>
+            </a>
           </div>
         </div>
 

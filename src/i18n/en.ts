@@ -6,6 +6,10 @@
     description: "From code to a verified fix: I like finding out why a feature breaks, then making it dependable.",
     location: "Antananarivo, Madagascar · Open to opportunities", cta1: "Explore the cases", cta2: "Download CV",
     experience: "years of experience", roles: "professional roles", academicProjects: "academic projects",
+    experienceDetail: "Development · maintenance · quality",
+    expertiseTitle: "Web & mobile",
+    expertiseLabel: "Full-stack development",
+    expertiseDetail: "Interfaces · APIs · databases",
   },
   about: {
     title: "About",

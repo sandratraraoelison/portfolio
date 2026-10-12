@@ -6,6 +6,10 @@
     description: "Du code au correctif validé : j’aime comprendre pourquoi une fonctionnalité casse, puis la rendre fiable.",
     location: "Antananarivo, Madagascar · Ouvert aux opportunités", cta1: "Explorer les dossiers", cta2: "Télécharger mon CV",
     experience: "ans d’expérience", roles: "expériences professionnelles", academicProjects: "projets académiques",
+    experienceDetail: "Développement · maintenance · qualité",
+    expertiseTitle: "Web & mobile",
+    expertiseLabel: "Développement full-stack",
+    expertiseDetail: "Interfaces · API · bases de données",
   },
   about: {
     title: "À propos",
